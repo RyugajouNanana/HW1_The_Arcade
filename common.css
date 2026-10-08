@@ -1,0 +1,237 @@
+/* ============================
+   The Arcade: shared styles
+   ============================ */
+
+:root {
+  --color-bg: #f7f6fb;
+  --color-surface: #ffffff;
+  --color-border: #d7d3e4;
+  --color-text: #1a1726;
+  --color-text-muted: #555070;
+  --color-accent: #5530d9;
+  --color-accent-dark: #4422b8;
+  --color-accent-soft: #ece7ff;
+  --color-success: #067647;
+
+  /* Type */
+
+  --text-sm: 0.875rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.75rem;
+  --text-2xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 3rem;
+
+  /* Layout and shape */
+  --container: 64rem;
+  --measure: 65ch;
+  --tap: 44px;
+  --radius: 0.75rem;
+}
+
+/* ============================
+   Base
+   ============================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+h4 { font-size: var(--text-md); }
+h5,
+h6 { font-size: var(--text-sm); }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-1);
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.lead {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+/* ====================
+   Header and navbar 
+   ==================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0 var(--space-3);
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.nav-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: var(--space-3);
+  bottom: 4px;
+  left: var(--space-3);
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+/* =========================
+    Buttons
+   ========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  border: 2px solid var(--color-accent);
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+@media (max-width: 40rem) {
+  body {
+    padding-bottom: 3.5rem; 
+  }
+
+  .container {
+    padding-top: var(--space-4);
+  }
+
+  .site-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+  }
+
+  .nav-list li {
+    flex: 1;
+  }
+
+  .nav-link {
+    min-height: 3.5rem;
+    padding: 0;
+    font-size: var(--text-sm);
+  }
+
+  .nav-link[aria-current="page"]::after {
+    top: 0;
+    bottom: auto;
+    left: 25%;
+    right: 25%;
+  }
+}

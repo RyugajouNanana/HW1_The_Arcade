@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Placeholder portrait: swap this file for a real photo (e.g. avatar.jpg) when you're ready -->
+  <rect width="200" height="200" fill="#ece7ff"/>
+  <circle cx="160" cy="40" r="10" fill="#a897ff"/>
+  <rect x="28" y="30" width="14" height="14" rx="3" fill="#a897ff"/>
+  <!-- shoulders -->
+  <path d="M30 200 C34 152 64 132 100 132 C136 132 166 152 170 200 Z" fill="#5530d9"/>
+  <path d="M84 134 L100 156 L116 134 Z" fill="#ece7ff"/>
+  <!-- neck and head -->
+  <rect x="88" y="108" width="24" height="28" rx="10" fill="#e8b996"/>
+  <ellipse cx="100" cy="86" rx="34" ry="38" fill="#f1c7a5"/>
+  <!-- hair -->
+  <path d="M64 84 C60 52 82 40 102 40 C126 40 142 56 136 84 C132 70 124 62 112 60 C100 66 82 66 70 64 C66 70 64 76 64 84 Z" fill="#1a1726"/>
+  <!-- face -->
+  <circle cx="88" cy="88" r="3.5" fill="#1a1726"/>
+  <circle cx="112" cy="88" r="3.5" fill="#1a1726"/>
+  <path d="M90 104 Q100 112 110 104" fill="none" stroke="#1a1726" stroke-width="3" stroke-linecap="round"/>
+  <!-- glasses -->
+  <g fill="none" stroke="#1a1726" stroke-width="2.5">
+    <rect x="76" y="79" width="22" height="17" rx="6"/>
+    <rect x="102" y="79" width="22" height="17" rx="6"/>
+    <path d="M98 86 H102"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+/* Contact page */
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.reasons {
+  margin-top: var(--space-5);
+}
+

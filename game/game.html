@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../"><img src="../images/favicon.svg" width="32" height="32" alt=""> Jake Chen's Arcade</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../home.html">Home</a></li>
+        <li><a class="nav-link" href="./game.html" aria-current="page">Puzzle</a></li>
+        <li><a class="nav-link" href="../about/about.html">About</a></li>
+        <li><a class="nav-link" href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">Game 1 · Mini crossword</p>
+    <h1>Dev Mini</h1>
+    <p class="lead">Five by five, mostly about the web. Tap a square and type. Tab moves forward, Shift + Tab goes back.</p>
+
+    <section class="puzzle" aria-labelledby="puzzle-heading">
+      <h2 id="puzzle-heading" class="visually-hidden">Puzzle</h2>
+
+      <form class="puzzle__play" aria-label="Crossword grid">
+        <div class="board">
+          <div class="cell cell--block"></div>
+          <label class="cell"><span class="cell__num" aria-hidden="true">1</span><input type="text" maxlength="1" pattern="[Ss]" placeholder=" " autocomplete="off" aria-label="Row 1, column 2, 1 Across, 1 Down"></label>
+          <label class="cell"><span class="cell__num" aria-hidden="true">2</span><input type="text" maxlength="1" pattern="[Rr]" placeholder=" " autocomplete="off" aria-label="Row 1, column 3, 1 Across, 2 Down"></label>
+          <label class="cell"><span class="cell__num" aria-hidden="true">3</span><input type="text" maxlength="1" pattern="[Cc]" placeholder=" " autocomplete="off" aria-label="Row 1, column 4, 1 Across, 3 Down"></label>
+          <div class="cell cell--block"></div>
+          <label class="cell"><span class="cell__num" aria-hidden="true">4</span><input type="text" maxlength="1" pattern="[Bb]" placeholder=" " autocomplete="off" aria-label="Row 2, column 1, 4 Across, 4 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Oo]" placeholder=" " autocomplete="off" aria-label="Row 2, column 2, 4 Across, 1 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Aa]" placeholder=" " autocomplete="off" aria-label="Row 2, column 3, 4 Across, 2 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Rr]" placeholder=" " autocomplete="off" aria-label="Row 2, column 4, 4 Across, 3 Down"></label>
+          <label class="cell"><span class="cell__num" aria-hidden="true">5</span><input type="text" maxlength="1" pattern="[Dd]" placeholder=" " autocomplete="off" aria-label="Row 2, column 5, 4 Across, 5 Down"></label>
+          <label class="cell"><span class="cell__num" aria-hidden="true">6</span><input type="text" maxlength="1" pattern="[Aa]" placeholder=" " autocomplete="off" aria-label="Row 3, column 1, 6 Across, 4 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Ll]" placeholder=" " autocomplete="off" aria-label="Row 3, column 2, 6 Across, 1 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Tt]" placeholder=" " autocomplete="off" aria-label="Row 3, column 3, 6 Across, 2 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Ee]" placeholder=" " autocomplete="off" aria-label="Row 3, column 4, 6 Across, 3 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Rr]" placeholder=" " autocomplete="off" aria-label="Row 3, column 5, 6 Across, 5 Down"></label>
+          <label class="cell"><span class="cell__num" aria-hidden="true">7</span><input type="text" maxlength="1" pattern="[Dd]" placeholder=" " autocomplete="off" aria-label="Row 4, column 1, 7 Across, 4 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Aa]" placeholder=" " autocomplete="off" aria-label="Row 4, column 2, 7 Across, 1 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Ii]" placeholder=" " autocomplete="off" aria-label="Row 4, column 3, 7 Across, 2 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Ss]" placeholder=" " autocomplete="off" aria-label="Row 4, column 4, 7 Across, 3 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Yy]" placeholder=" " autocomplete="off" aria-label="Row 4, column 5, 7 Across, 5 Down"></label>
+          <div class="cell cell--block"></div>
+          <label class="cell"><span class="cell__num" aria-hidden="true">8</span><input type="text" maxlength="1" pattern="[Rr]" placeholder=" " autocomplete="off" aria-label="Row 5, column 2, 8 Across, 1 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Oo]" placeholder=" " autocomplete="off" aria-label="Row 5, column 3, 8 Across, 2 Down"></label>
+          <label class="cell"><input type="text" maxlength="1" pattern="[Tt]" placeholder=" " autocomplete="off" aria-label="Row 5, column 4, 8 Across, 3 Down"></label>
+          <div class="cell cell--block"></div>
+        </div>
+        <p class="solved" role="status"><strong>Solved!</strong> Every letter is right.</p>
+        <button class="button button--secondary" type="reset">Clear grid</button>
+      </form>
+
+      <div class="clues">
+        <section aria-labelledby="across-heading">
+          <h3 id="across-heading">Across</h3>
+          <ol>
+            <li value="1">Attribute that tells an <code>&lt;img&gt;</code> which file to load</li>
+            <li value="4">Chess or checkers surface</li>
+            <li value="6">Modify, as a tailor does a hem</li>
+            <li value="7">Flower in a game of "loves me, loves me not"</li>
+            <li value="8">Bit ___ (slow decay of code nobody maintains)</li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="down-heading">
+          <h3 id="down-heading">Down</h3>
+          <ol>
+            <li value="1">Kind of panel on a sunny rooftop</li>
+            <li value="2"><code>aspect-___</code>, the CSS property that keeps these squares square</li>
+            <li value="3">Peak of a wave</li>
+            <li value="4">HTTP 400: "___ Request"</li>
+            <li value="5">"Don't Repeat Yourself," for short</li>
+          </ol>
+        </section>
+
+        <details class="reveal">
+          <summary>Reveal the solution</summary>
+          <h4>Across</h4>
+          <p>1 SRC · 4 BOARD · 6 ALTER · 7 DAISY · 8 ROT</p>
+          <h4>Down</h4>
+          <p>1 SOLAR · 2 RATIO · 3 CREST · 4 BAD · 5 DRY</p>
+        </details>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
